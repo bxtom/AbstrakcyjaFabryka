@@ -1,7 +1,7 @@
 public class Klient {
-    private AbstractFactory fabrykaZBazy = new FabrykaZBazy();
+    private AbstractFactory fabrykaZBazy = FabrykaZBazy.getInstance();
 
-    private AbstractFactory fabrykaZPliku = new FabrykaZPliku();
+    private AbstractFactory fabrykaZPliku = FabrykaZPliku.getInstance();
 
     SamochodOsobowy samochodOsobowy = fabrykaZBazy.utworzSamochodOsobowy();
 
