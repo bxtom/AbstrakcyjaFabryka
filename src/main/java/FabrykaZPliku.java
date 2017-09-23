@@ -1,8 +1,10 @@
 public class FabrykaZPliku implements AbstractFactory {
-    private final static FabrykaZPliku ourInstance = new FabrykaZPliku();
+    private final static class SingletonHolder {
+        private final static FabrykaZPliku instance = new FabrykaZPliku();
+    }
 
-    public static FabrykaZPliku getInstance() {
-        return ourInstance;
+    public final static FabrykaZPliku getInstance() {
+        return SingletonHolder.instance;
     }
 
     private FabrykaZPliku() {
